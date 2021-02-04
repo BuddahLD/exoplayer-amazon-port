@@ -1,0 +1,17 @@
+apply plugin: 'maven-publish'
+
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.google.android.exoplayer'
+            version = '2.12.1'
+
+            artifact(sourceJar)
+        }
+    }
+}

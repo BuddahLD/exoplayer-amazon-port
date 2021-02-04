@@ -26,3 +26,12 @@ ext {
     releaseDescription = 'The ExoPlayer library (all modules).'
 }
 apply from: '../../publish.gradle'
+
+apply from: '../../publish_maven.gradle'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'exoplayer'
+        }
+    }
+}

@@ -30,3 +30,12 @@ ext {
     releaseDescription = 'Media session extension for ExoPlayer.'
 }
 apply from: '../../publish.gradle'
+
+apply from: '../../publish_maven.gradle'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'extension-mediasession'
+        }
+    }
+}
