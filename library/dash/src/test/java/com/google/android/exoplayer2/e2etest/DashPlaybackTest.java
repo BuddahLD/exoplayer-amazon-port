@@ -30,6 +30,7 @@ import com.google.android.exoplayer2.testutil.AutoAdvancingFakeClock;
 import com.google.android.exoplayer2.testutil.DumpFileAsserts;
 import com.google.android.exoplayer2.testutil.TestExoPlayer;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,6 +47,7 @@ public final class DashPlaybackTest {
       ShadowMediaCodecConfig.forAllSupportedMimeTypes();
 
   // https://github.com/google/ExoPlayer/issues/7985
+  @Ignore
   @Test
   public void webvttInMp4() throws Exception {
     SimpleExoPlayer player =
